@@ -19,6 +19,7 @@ TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a7
 TARGET_CPU_SMP := false
 ARCH_ARM_HAVE_TLS_REGISTER := true
+TARGET_ARCH_LOWMEM := true
 
 #fstab for nand
 TARGET_RECOVERY_FSTAB := device/BLU/D190U/nand/recovery.fstab
