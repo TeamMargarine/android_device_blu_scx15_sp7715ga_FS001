@@ -1,6 +1,6 @@
 
-# include aosp base configs
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+# get minimum languages
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # sprd telephony
 PRODUCT_PACKAGES += \
