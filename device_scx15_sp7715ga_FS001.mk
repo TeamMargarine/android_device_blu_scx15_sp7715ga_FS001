@@ -1,3 +1,18 @@
+# Copyright (C) 2014 The CyanogenMod Project
+#-
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#-
+#      http://www.apache.org/licenses/LICENSE-2.0
+#-
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+
 
 # get minimum languages
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
@@ -128,6 +143,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 endif # TARGET_BUILD_VARIANT == user
 
+#Start of support for Firefox OS added by Spreadtrum Communications
 # Gecko/Gaia need below export value
 ifeq ($(strip $(GAIA_APP_SRCDIRS)),)
 export GAIA_APP_SRCDIRS=apps external-apps outoftree_apps customize_apps/engmode/assets customize_apps/ValidationTools_1.4/assets customize_apps/engSgps
@@ -172,3 +188,58 @@ endif
 ifeq ($(strip $(MOZILLA_MLS_KEY_FILE)),)
 export MOZILLA_MLS_KEY_FILE=$(ANDROID_BUILD_TOP)/$(PLATDIR)/mls.key
 endif
+
+#End of modifications by Spreadtrum
+#Start of modifications by Qiangong2
+
+PRODUCT_LCD_TYPE := hvga
+PRODUCT_AAPT_CONFIG := mdpi
+
+#Storage
+RECOVERY_EXTERNAL_STORAGE := /sdcard
+SYSTEM_FS_TYPE := ubifs
+SYSTEM_PARTITION_TYPE := UBI
+SYSTEM_LOCATION := /dev/ubi0_system
+
+# languages
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.product.locale.language=en \
+    ro.product.locale.region=GB
+
+#Below is from sprd-dev
+PRODUCT_PROPERTY_OVERRIDES += \
+	keyguard.no_require_sim=true \
+	ro.com.android.dataroaming=false \
+	ro.msms.phone_count=2 \
+	persist.msms.phone_count=2 \
+	persist.msmslt=0 \
+	ro.modem.w.count=2 \
+        persist.sys.modem.diag=,gser \
+        sys.usb.gser.count=4 \
+        wcdma.sim.slot.cfg=true \
+        persist.support.oplpnn=true \
+        persist.support.cphsfirst=false \
+	ro.sf.lcd_density=160 \
+	ro.sf.lcd_width=54 \
+	ro.sf.lcd_height=96 \
+	lmk.autocalc=false \
+	#more firefox OS stuff below
+	ro.moz.ril.query_icc_count=true \
+	ro.moz.mute.call.to_ril=true \
+	ro.moz.ril.numclients=2 \
+        ro.moz.ril.data_reg_on_demand=true\
+        ro.moz.ril.radio_off_wo_card=true\
+        ro.moz.ril.0.network_types = gsm,wcdma\
+        ro.moz.ril.1.network_types = gsm
+        
+# use gaia default image resource
+GAIA_DEV_PIXELS_PER_PX := 1
+
+#End firefox os stuff
+
+# For userdebug builds
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.secure=0 \
+    ro.adb.secure=0 \
+    ro.debuggable=1 \
+    persist.service.adb.enable=1 \
