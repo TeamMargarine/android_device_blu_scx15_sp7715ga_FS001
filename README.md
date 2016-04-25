@@ -15,6 +15,7 @@ Device tree for the Blu Dash JR 3G
 |Resolution     | 320 x 480 pixels    |
 |Front Camera   | 0.3 MP              |
 |Main Camera    | 2 MP                |
+|Codename       | scx15_sp7715ga_FS001|
 
 #Note
 
