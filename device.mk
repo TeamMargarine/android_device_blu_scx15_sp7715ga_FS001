@@ -13,11 +13,30 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/BLU/D190U
+$(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product, $(LOCAL_PATH)/device.mk)
+$(call inherit-product-if-exists, vendor/BLU/D190U/scx15_sp7715ga_FS001-vendor.mk)
 
-# Rootdir files
+#Boot Animation
+TARGET_SCREEN_HEIGHT := 480
+TARGET_SCREEN_WIDTH := 320
+
+#Video modules
+PRODUCT_PACKAGES += \
+	libstagefright_sprd_soft_mpeg4dec \
+	libstagefright_sprd_soft_h264dec \
+	libstagefright_sprd_mpeg4dec \
+	libstagefright_sprd_mpeg4enc \
+	libstagefright_sprd_h264dec \
+	libstagefright_sprd_h264enc \
+	libstagefright_sprd_vpxdec \
+	libstagefright_soft_mjpgdec \
+	libstagefright_soft_imaadpcmdec \
+	libstagefright_sprd_aacdec \
+	libstagefright_sprd_mp3dec \
+	libstagefright_sprd_apedec
+
+#Rootdir files
 ROOTDIR_FILES := \
 	$(LOCAL_PATH)/ramdisk/init.rc \
 	$(LOCAL_PATH)/ramdisk/init.board.rc \
