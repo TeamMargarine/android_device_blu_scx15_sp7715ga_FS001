@@ -12,6 +12,8 @@
 #
 #
 
+-include device/BLU/D190U/BoardConfigNand.mk
+
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_BOARD_PLATFORM := scx15
@@ -34,6 +36,7 @@ TARGET_NO_KERNEL := false
 USES_UNCOMPRESSED_KERNEL := true
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := console=ttS1,115200n8
+TARGET_KERNEL_CONFIG := cm_scx15_sp7715ga_FS001-defconfig
 
 #sepolicy
 BOARD_SEPOLICY_DIRS := device/BLU/D190U/sepolicy
