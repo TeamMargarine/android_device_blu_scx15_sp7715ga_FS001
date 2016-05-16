@@ -14,5 +14,5 @@
 # limitations under the License.
 #
 
-add_lunch_combo cm_scx15_sp7715ga_FS001-userdebug
-add_lunch_combo cm_scx15_sp7715ga_FS001-eng
+add_lunch_combo cm_D190U-userdebug
+add_lunch_combo cm_D190U-eng
