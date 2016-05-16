@@ -12,7 +12,7 @@
 #
 #
 
--include device/BLU/D190U/BoardConfigNand.mk
+
 
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
