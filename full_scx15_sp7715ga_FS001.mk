@@ -17,7 +17,7 @@
 #
 
 #Inherit device-specific files
-$(call inherit-product, device/BLU/D190U/device_scx15_sp7715ga_FS001.mk
+$(call inherit-product, device/BLU/D190U/device_scx15_sp7715ga_FS001.mk)
 
 #Overrides
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
