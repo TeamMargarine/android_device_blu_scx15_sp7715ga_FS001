@@ -8,7 +8,7 @@ PRODUCT_RELEASE_NAME := scx15_sp7715ga_FS001
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 #inherit device configuration
-$(call inherit-product, device/BLU/D190U/full_scx15_sp7715ga_FS001.mk)
+$(call inherit-product, device/BLU/D190U/full_D190U.mk)
 
 #Override build properties
 PRODUCT_BUILD_PROP_OVERRIDES += \
@@ -19,6 +19,6 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 #Device Identifier. Needs to come after every other inclusion
 PRODUCT_MODEL := DASH JR 3G
 PRODUCT_BRAND := BLU
-PRODUCT_NAME := cm_scx15_sp7715ga_FS001
-PRODUCT_DEVICE := scx15_sp7715ga_FS001
+PRODUCT_NAME := cm_D190U
+PRODUCT_DEVICE := D190U
 PRODUCT_MANUFACTURER := BLU
