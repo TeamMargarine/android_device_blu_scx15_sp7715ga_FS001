@@ -12,8 +12,6 @@
 #
 #
 
-
-
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_BOARD_PLATFORM := scx15
@@ -25,7 +23,7 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_ARCH_LOWMEM := true
 TARGET_BOOTLOADER_BOARD_NAME := scx15_sp7715ga
 
-#fstab for nand
+#fstab
 TARGET_RECOVERY_FSTAB := device/BLU/D190U/nand/recovery.fstab
 
 #config u-boot
