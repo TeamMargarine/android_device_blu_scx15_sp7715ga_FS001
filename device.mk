@@ -13,7 +13,7 @@
 # limitations under the License.
 #
 
-$(call inherit-product, device/common/gps/gps_us_supl.mk)
+#$(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 $(call inherit-product-if-exists, vendor/BLU/D190U/scx15_sp7715ga_FS001-vendor.mk)
 
