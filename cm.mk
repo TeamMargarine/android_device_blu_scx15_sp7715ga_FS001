@@ -8,7 +8,7 @@ PRODUCT_RELEASE_NAME := scx15_sp7715ga_FS001
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 #inherit device configuration
-$call inherit-product, device/BLU/D190U/full_scx15_sp7715ga_FS001.mk
+$(call inherit-product, device/BLU/D190U/full_scx15_sp7715ga_FS001.mk)
 
 #Override build properties
 PRODUCT_BUILD_PROP_OVERRIDES += \
