@@ -5,7 +5,7 @@ Device tree for the Blu Dash JR 3G
 
 |Features       | Specification       |
 | :-------------| :-------------------|
-|CPU            | Single Core 1.2 GHz |
+|CPU            | Single Core 1.0 GHz |
 |Chipset        | SC7715              |
 |GPU            | Mali-400            |
 |Memory         | 256MB               |
