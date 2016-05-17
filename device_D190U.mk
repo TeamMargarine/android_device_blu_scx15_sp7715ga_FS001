@@ -17,9 +17,7 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 $(call inherit-product-if-exists, vendor/BLU/D190U/scx15_sp7715ga_FS001-vendor.mk)
 
-#Boot Animation
-TARGET_SCREEN_HEIGHT := 480
-TARGET_SCREEN_WIDTH := 320
+LOCAL_PATH := device/BLU/D190U
 
 #Video modules
 PRODUCT_PACKAGES += \
@@ -39,12 +37,9 @@ PRODUCT_PACKAGES += \
 #Rootdir files
 ROOTDIR_FILES := \
 	$(LOCAL_PATH)/ramdisk/init.rc \
-	$(LOCAL_PATH)/ramdisk/init.board.rc \
+	$(LOCAL_PATH)/ramdisk/init.recovery.board.rc \
 	$(LOCAL_PATH)/ramdisk/init.scx15.rc \
 	$(LOCAL_PATH)/ramdisk/init.scx15.usb.rc \
-	$(LOCAL_PATH)/ramdisk/init.scx15_ss.rc \
-	$(LOCAL_PATH)/ramdisk/init.vivalto3gvn.rc \
-	$(LOCAL_PATH)/ramdisk/init.vivalto3gvn_base.rc \
 	$(LOCAL_PATH)/ramdisk/init.wifi.rc \
 	$(LOCAL_PATH)/ramdisk/init.swap.rc \
 	$(LOCAL_PATH)/ramdisk/init.recovery.scx15.rc \
@@ -52,3 +47,10 @@ ROOTDIR_FILES := \
 	$(LOCAL_PATH)/ramdisk/fstab.scx15 \
 	$(LOCAL_PATH)/ramdisk/fstab.swap \
 	$(LOCAL_PATH)/ramdisk/property_contexts
+
+# Keylayout
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/keylayouts/gpio-keys.kl:system/usr/keylayout/gpio-keys.kl \
+    $(LOCAL_PATH)/keylayouts/sci-keypad.kl:system/usr/keylayout/sci-keypad.kl
+
+PRODUCT_LOCALES += mdpi
