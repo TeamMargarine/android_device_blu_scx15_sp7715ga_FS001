@@ -92,3 +92,6 @@ BOARD_USE_SPRD_FMAPP := true
 
 # Enable dex-preoptimization
 WITH_DEXPREOPT := true
+
+#Recovery related
+TARGET_RECOVERY_INITRC := device/BLU/D190U/init.rc
