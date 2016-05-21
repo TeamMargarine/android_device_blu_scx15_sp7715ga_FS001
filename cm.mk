@@ -13,7 +13,7 @@ $(call inherit-product, device/BLU/D190U/full_D190U.mk)
 #Override build properties
 PRODUCT_BUILD_PROP_OVERRIDES += \
 	PRODUCT_NAME=scx15_sp7715ga_FS001plus_NativeUIhvga \
-	TARGET_DEVICE=scx15_sp7715ga_FS001
+	TARGET_DEVICE=scx15_sp7715ga_FS001 \
 	BUILD_FINGERPRINT="BLU/scx15_sp7715ga_FS001plus_NativeUIhvga/scx15_sp7715ga_FS001:4.4.2/KOT49H/BLU_D190U_V08_GENERIC_20150918_1512:user/test-keys"_PRIVATE_BUILD_DESC="user_4.4.2_KOT49H-BLU_D190U_V08_GENERIC_20150918_1512+test-keys"
 
 #Device Identifier. Needs to come after every other inclusion
