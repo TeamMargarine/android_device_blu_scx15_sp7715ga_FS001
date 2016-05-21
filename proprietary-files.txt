@@ -4,3 +4,6 @@
 /etc/spn-conf.xml
 /etc/connectivity_calibration.ini
 /etc/adb.iso
+
+#libs
+/lib/libstagefright_soft_aacdec.so
