@@ -1,0 +1,4 @@
+#etc
+/etc/spn-conf.xml
+/etc/connectivity_calibration.ini
+/etc/adb.iso

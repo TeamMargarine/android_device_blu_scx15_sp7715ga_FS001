@@ -26,6 +26,46 @@ PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/headset-keyboard.kl:system/usr/keylayout/headset-keyboard.kl \ 
      $(LOCAL_PATH)/sci-keypad.kl:system/usr/keylayout/sci-keypad.kl 
 
+#Video Wallpapers
+PRODUCT_VIDEO_WALLPAPERS := none	 
+
+#Build.prop overrides
+PRODUCT_PROPERTY_OVERRIDES += \
+	 ro.sf.lcd_density=160 \
+	 ro.sf.lcd_width=36 \
+	 ro.sf.lcd_height=54 \
+	 keyguard.no_require_sim=true \
+	 lmk.autocalc=false \
+	 ro.msms.phone_count=2 \
+	 ro.modem.w.count=2 \
+	 sys.usb.gser.count=4
+
+#Audio
+PRODUCT_COPY_FILES += \
+	 $(LOCAL_PATH)/audio_params/tiny_hw.xml:system/etc/tiny_hw.xml \
+	 $(LOCAL_PATH)/audio_params/audio_hw.xml:system/etc/audio_hw.xml \
+	 $(LOCAL_PATH)/audio_params/codec_pga.xml:system/etc/codec_pga.xml \
+	 $(LOCAL_PATH)/audio_params/audio_policy.conf:system/etc/audio_policy.conf \
+	 $(LOCAL_PATH)/audio_params/audio_para:system/etc/audio_para \
+	 $(LOCAL_PATH)/media/media_codecs.xml:system/etc/media_codecs.xml \
+	 $(LOCAL_PATH)/media/media_profiles.xml:system/etc/media_profiles.xml
+
+#Frameworks needed
+PRODUCT_COPY_FILES += \
+	 frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
+	 frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.sensor.compass.xml \
+	 frameworks/native/data/etc/android.hardware.sensor.proximity.xml:system/etc/permissions/android.hardware.sensor.proximity.xml \
+	 frameworks/native/data/etc/android.hardware.sensor.accelerometer.xml:system/etc/permissions/android.hardware.sensor.accelerometer.xml \
+	 frameworks/native/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
+	 frameworks/native/data/etc/android.hardware.telephony.gsm.xml:system/etc/permissions/android.hardware.telephony.gsm.xml \
+	 frameworks/native/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
+	 frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml \
+	 frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:system/etc/permissions/android.hardware.camera.flash-autofocus.xml \
+	 frameworks/native/data/etc/android.hardware.camera.autofocus.xml:system/etc/permissions/android.hardware.camera.autofocus.xml \
+	 frameworks/native/data/etc/handheld_core_hardware.xml:system/etc/permissions/handheld_core_hardware.xml \
+	 frameworks/native/data/etc/android.hardware.touchscreen.xml:system/etc/permissions/android.hardware.touchscreen.xml \
+	 frameworks/native/data/etc/android.hardware.touchscreen.multitouch.xml:system/etc/permissions/android.hardware.touchscreen.multitouch.xml \
+	 frameworks/native/data/etc/android.hardware.wifi.xml:system/etc/permissions/android.hardware.wifi.xml
 
 #Video modules
 PRODUCT_PACKAGES += \
