@@ -17,6 +17,16 @@ $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 $(call inherit-product-if-exists, vendor/BLU/D190U/scx15_sp7715ga_FS001-vendor.mk)
 
+#Overlays
+DEVICE_PACKAGE_OVERLAYS += device/BLU/D190U/overlay
+
+LOCAL_PATH := device/BLU/D190U
+
+PRODUCT_COPY_FILES += \ 
+     $(LOCAL_PATH)/headset.kl:system/usr/keylayout/headset-keyboard.kl \ 
+     $(LOCAL_PATH)/sci-keypad.kl:system/usr/keylayout/sci-keypad.kl 
+
+
 #Video modules
 PRODUCT_PACKAGES += \
 	libstagefright_sprd_soft_mpeg4dec \
