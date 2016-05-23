@@ -86,6 +86,7 @@ PRODUCT_PACKAGES += \
 ROOTDIR_FILES := \
 	$(LOCAL_PATH)/ramdisk/init.rc \
 	$(LOCAL_PATH)/ramdisk/init.board.rc \
+	$(LOCAL_PATH)/ramdisk/init.recovery.board.rc \
 	$(LOCAL_PATH)/ramdisk/init.scx15.rc \
 	$(LOCAL_PATH)/ramdisk/init.scx15.usb.rc \
 	$(LOCAL_PATH)/ramdisk/init.scx15_ss.rc \
