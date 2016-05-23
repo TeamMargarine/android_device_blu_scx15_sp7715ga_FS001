@@ -22,8 +22,8 @@ DEVICE_PACKAGE_OVERLAYS += device/BLU/D190U/overlay
 
 LOCAL_PATH := device/BLU/D190U
 
-PRODUCT_COPY_FILES += \ 
-     $(LOCAL_PATH)/headset-keyboard.kl:system/usr/keylayout/headset-keyboard.kl \ 
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/headset-keyboard.kl:system/usr/keylayout/headset-keyboard.kl \
      $(LOCAL_PATH)/sci-keypad.kl:system/usr/keylayout/sci-keypad.kl 
 
 #Video Wallpapers
