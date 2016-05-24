@@ -100,8 +100,8 @@ BOARD_USE_SPRD_FMAPP := true
 # Enable dex-preoptimization
 WITH_DEXPREOPT := true
 
-#Recovery related
-TARGET_RECOVERY_INITRC := device/BLU/D190U/ramdisk/init.rc
+#Recovery related (comment this when building twrp
+#TARGET_RECOVERY_INITRC := device/BLU/D190U/ramdisk/init.rc
 
 #Audio configs
 BOARD_USES_TINYALSA_AUDIO := true
@@ -109,9 +109,20 @@ BOARD_USES_GENERIC_AUDIO := true
 BOARD_USES_ALSA_AUDIO := false
 BUILD_WITH_ALSA_UTILS := false
 
-#TWRP parts
+#change for different recovery types
 RECOVERY_VARIANT := twrp
-TW_THEME := portrait_mdpi
+
+#TWRP parts (comment these when not building twrp
+#TW_THEME := portrait_mdpi
 TW_CUSTOM_POWER_BUTTON := 116
+TARGET_RECOVERY_INITRC := device/BLU/D190U/ramdisk/init.rc
 TW_NO_BATT_PERCENT := true
 DEVICE_RESOLUTION := 320x480
+TW_HAVE_SELINUX := true
+TW_INTERNAL_STORAGE_PATH := "/dev/block/platform/sprd-sdhci.0/mmcblk0p1"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "sdcard"
+TW_FLASH_FROM_STORAGE := true
+TW_NO_REBOOT_BOOTLOADER := true
+SP1_NAME := "internal_sd"
+SP1_BACKUP_METHOD := files
+SP1_MOUNTABLE := 1
