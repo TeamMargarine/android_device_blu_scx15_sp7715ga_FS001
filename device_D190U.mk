@@ -29,6 +29,8 @@ PRODUCT_COPY_FILES += \
 #Video Wallpapers
 PRODUCT_VIDEO_WALLPAPERS := none	 
 
+PRODUCT_COPY_FILES += device/BLU/D190U/twrp.fstab:recovery/root/etc/twrp.fstab
+
 #Build.prop overrides
 PRODUCT_PROPERTY_OVERRIDES += \
 	 ro.sf.lcd_density=160 \
