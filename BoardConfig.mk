@@ -24,8 +24,11 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 TARGET_BOOTLOADER_BOARD_NAME := scx15_sp7715ga
 #BOARD_HAS_LARGE_FILESYSTEM := false
 
-#fstab
-TARGET_RECOVERY_FSTAB := device/BLU/D190U/nand/recovery.fstab
+#fstab for cwm
+#TARGET_RECOVERY_FSTAB := device/BLU/D190U/nand/recovery.fstab
+
+#fstab for twrp
+TARGET_RECOVERY_FSTAB := device/BLU/D190U/twrp.fstab
 
 #config u-boot
 TARGET_NO_BOOTLOADER := false
@@ -100,7 +103,7 @@ BOARD_USE_SPRD_FMAPP := true
 # Enable dex-preoptimization
 WITH_DEXPREOPT := true
 
-#Recovery related (comment this when building twrp
+#Recovery related (comment this when building twrp)
 #TARGET_RECOVERY_INITRC := device/BLU/D190U/ramdisk/init.rc
 
 #Audio configs
@@ -112,7 +115,7 @@ BUILD_WITH_ALSA_UTILS := false
 #change for different recovery types
 RECOVERY_VARIANT := twrp
 
-#TWRP parts (comment these when not building twrp
+#TWRP parts (comment these when not building twrp)
 #TW_THEME := portrait_mdpi
 TW_CUSTOM_POWER_BUTTON := 116
 TARGET_RECOVERY_INITRC := device/BLU/D190U/ramdisk/init.rc
@@ -123,6 +126,6 @@ TW_INTERNAL_STORAGE_PATH := "/dev/block/platform/sprd-sdhci.0/mmcblk0p1"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "sdcard"
 TW_FLASH_FROM_STORAGE := true
 TW_NO_REBOOT_BOOTLOADER := true
-SP1_NAME := "internal_sd"
+SP1_NAME := "sdcard"
 SP1_BACKUP_METHOD := files
 SP1_MOUNTABLE := 1
