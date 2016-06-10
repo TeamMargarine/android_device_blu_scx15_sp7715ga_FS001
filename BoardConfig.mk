@@ -11,6 +11,7 @@
 #Feel free to edit anything below this line :)
 #
 #
+# Thanks BLU for NOT providing the source code... -_-
 
 TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
@@ -28,19 +29,19 @@ TARGET_BOOTLOADER_BOARD_NAME := scx15_sp7715ga
 #TARGET_RECOVERY_FSTAB := device/BLU/D190U/nand/recovery.fstab
 
 #fstab for twrp
-TARGET_RECOVERY_FSTAB := device/BLU/D190U/twrp.fstab
+TARGET_RECOVERY_FSTAB := device/BLU/D190U/nand/twrp.fstab
 
 #config u-boot
 TARGET_NO_BOOTLOADER := false
 
-#configure kernel
+#configure kernel (We love prebuilt kernels :D )
 TARGET_NO_KERNEL := false
 TARGET_USES_UNCOMPRESSED_KERNEL := true
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := console=ttS1,115200n8
-TARGET_KERNEL_CONFIG := sp7715ga-native-hvga_defconfig
-#TARGET_PREBUILT_KERNEL := device/BLU/D190U/zImage
-TARGET_KERNEL_SOURCE := kernel/BLU/D190U
+#TARGET_KERNEL_CONFIG := sp7715ga-native-hvga_defconfig
+TARGET_PREBUILT_KERNEL := device/BLU/D190U/zImage
+#TARGET_KERNEL_SOURCE := kernel/BLU/D190U
 TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.6
 
 #sepolicy
@@ -78,8 +79,8 @@ BOARD_PRODNVIMAGE_FILE_SYSTEM_TYPE := ubifs
 
 #Bluetooth configs
 BOARD_HAVE_BLUETOOTH := true
-BOARD_HAVE_BLUETOOTH_SPRD := true
-BOARD_USE_SPRD_FMAPP := false
+#BOARD_HAVE_BLUETOOTH_SPRD := true
+#BOARD_USE_SPRD_FMAPP := false
 
 #GPS
 BOARD_USE_SPRD_4IN1_GPS := true
@@ -89,12 +90,23 @@ TARGET_USERIMAGES_USE_UBIFS := true
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ubifs
 BOARD_PRODNVIMAGE_FILE_SYSTEM_TYPE := ubifs
 
-#Boot Animation
-TARGET_SCREEN_HEIGHT := 480
-TARGET_SCREEN_WIDTH := 320
+#Boot Animation (Is this the problem why the recovery isn't working on build?)
+#TARGET_SCREEN_HEIGHT := 480
+#TARGET_SCREEN_WIDTH := 320
 
 # WIFI configs
 BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+WPA_SUPPLICANT_VERSION      := VER_2_1_DEVEL
+BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_sprdwl
+BOARD_HOSTAPD_DRIVER        := NL80211
+BOARD_HOSTAPD_PRIVATE_LIB   := lib_driver_cmd_sprdwl
+BOARD_WLAN_DEVICE           := sprdwl
+WIFI_DRIVER_FW_PATH_PARAM   := "/data/misc/wifi/fwpath"
+WIFI_DRIVER_FW_PATH_STA     := "sta_mode"
+WIFI_DRIVER_FW_PATH_P2P     := "p2p_mode"
+WIFI_DRIVER_FW_PATH_AP      := "ap_mode"
+WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/sprdwl.ko"
+WIFI_DRIVER_MODULE_NAME     := "sprdwl"
 
 # select WCN
 BOARD_HAVE_BLUETOOTH := true
@@ -106,7 +118,7 @@ BOARD_USE_SPRD_FMAPP := true
 WITH_DEXPREOPT := true
 
 #Recovery related (comment this when building twrp)
-TARGET_RECOVERY_INITRC := device/BLU/D190U/ramdisk/init.rc
+#TARGET_RECOVERY_INITRC := device/BLU/D190U/ramdisk/init.rc
 
 #Audio configs
 BOARD_USES_TINYALSA_AUDIO := true

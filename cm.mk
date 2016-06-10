@@ -1,5 +1,6 @@
 
 #cm.mk originally made by Qiangong2
+#	NOT by BLU
 
 #release name
 PRODUCT_RELEASE_NAME := scx15_sp7715ga_FS001

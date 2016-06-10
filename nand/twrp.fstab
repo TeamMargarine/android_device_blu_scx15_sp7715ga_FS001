@@ -1,0 +1,11 @@
+#Twrp fstab for BLU Dash JR 3G
+
+/boot		ubi			/dev/ubi0_boot
+/system		ubifs		/dev/ubi0_system
+/data		ubifs		/dev/ubi0_userdata
+/cache		ubifs		/dev/ubi0_cache
+/recovery	ubi			/dev/ubi0_recovery
+/misc		ubi			/dev/ubi0_misc
+/external_sd	vfat	/dev/block/mmcblk0p1	/dev/block/mmcblk0		flags=display="Micro SDCard";storage;wipeingui;removable
+/logo		ubi			/dev/ubi0_logo
+/productinfo	ubifs	/dev/ubi0_prodnv

@@ -12,24 +12,24 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+# Thank you BLU for never responding to my enquiries about source code
+#
+# and i guess this phone as well....
 
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, vendor/BLU/D190U/scx15_sp7715ga_FS001-vendor.mk)
+$(call inherit-product-if-exists, device/BLU/D190U/vendor/scx15_sp7715ga_FS001-vendor.mk)
 
 #Overlays
 DEVICE_PACKAGE_OVERLAYS += device/BLU/D190U/overlay
 
 LOCAL_PATH := device/BLU/D190U
 
-PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/headset-keyboard.kl:system/usr/keylayout/headset-keyboard.kl \
-     $(LOCAL_PATH)/sci-keypad.kl:system/usr/keylayout/sci-keypad.kl 
+#Video Wallpapers (Who uses these??)
+PRODUCT_VIDEO_WALLPAPERS := none
 
-#Video Wallpapers
-PRODUCT_VIDEO_WALLPAPERS := none	 
-
-PRODUCT_COPY_FILES += device/BLU/D190U/twrp.fstab:recovery/root/etc/twrp.fstab
+#Comment below if not building twrp
+PRODUCT_COPY_FILES += device/BLU/D190U/nand/twrp.fstab:recovery/root/etc/twrp.fstab
 
 #Build.prop overrides
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -52,7 +52,7 @@ PRODUCT_COPY_FILES += \
 	 $(LOCAL_PATH)/media/media_codecs.xml:system/etc/media_codecs.xml \
 	 $(LOCAL_PATH)/media/media_profiles.xml:system/etc/media_profiles.xml
 
-#Frameworks needed
+#Frameworks needed (maybe?)
 PRODUCT_COPY_FILES += \
 	 frameworks/native/data/etc/android.hardware.sensor.light.xml:system/etc/permissions/android.hardware.sensor.light.xml \
 	 frameworks/native/data/etc/android.hardware.sensor.compass.xml:system/etc/permissions/android.hardware.sensor.compass.xml \
@@ -92,8 +92,6 @@ ROOTDIR_FILES := \
 	$(LOCAL_PATH)/ramdisk/init.scx15.rc \
 	$(LOCAL_PATH)/ramdisk/init.scx15.usb.rc \
 	$(LOCAL_PATH)/ramdisk/init.scx15_ss.rc \
-	$(LOCAL_PATH)/ramdisk/init.vivalto3gvn.rc \
-	$(LOCAL_PATH)/ramdisk/init.vivalto3gvn_base.rc \
 	$(LOCAL_PATH)/ramdisk/init.wifi.rc \
 	$(LOCAL_PATH)/ramdisk/init.swap.rc \
 	$(LOCAL_PATH)/ramdisk/init.recovery.scx15.rc \
