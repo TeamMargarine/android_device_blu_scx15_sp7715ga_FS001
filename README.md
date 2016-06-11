@@ -23,7 +23,11 @@ The actual site doesn't advertise the Spreadtrum version. The site advertises on
 This is the D190U version. It has a Spreadtrum SC7715 (or SP7715, they seem to be interchangeable) processor instead of a Mediatek MT6572 processor.
 
 
+<<<<<<< HEAD
 List of known BLU Dash JR 3G variants (I should start collecting :D ) :
+=======
+List of known BLU Dash JR 3G variants (I should start collecting :D )
+>>>>>>> origin/master
 
 1. D190U
 
