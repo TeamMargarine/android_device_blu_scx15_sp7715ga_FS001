@@ -44,13 +44,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 #Audio
 PRODUCT_COPY_FILES += \
-	 $(LOCAL_PATH)/audio_params/tiny_hw.xml:system/etc/tiny_hw.xml \
-	 $(LOCAL_PATH)/audio_params/audio_hw.xml:system/etc/audio_hw.xml \
-	 $(LOCAL_PATH)/audio_params/codec_pga.xml:system/etc/codec_pga.xml \
-	 $(LOCAL_PATH)/audio_params/audio_policy.conf:system/etc/audio_policy.conf \
-	 $(LOCAL_PATH)/audio_params/audio_para:system/etc/audio_para \
-	 $(LOCAL_PATH)/media/media_codecs.xml:system/etc/media_codecs.xml \
-	 $(LOCAL_PATH)/media/media_profiles.xml:system/etc/media_profiles.xml
+	 $(LOCAL_PATH)/vendor/audio_params/tiny_hw.xml:system/etc/tiny_hw.xml \
+	 $(LOCAL_PATH)/vendor/audio_params/audio_hw.xml:system/etc/audio_hw.xml \
+	 $(LOCAL_PATH)/vendor/audio_params/codec_pga.xml:system/etc/codec_pga.xml \
+	 $(LOCAL_PATH)/vendor/audio_params/audio_policy.conf:system/etc/audio_policy.conf \
+	 $(LOCAL_PATH)/vendor/audio_params/audio_para:system/etc/audio_para \
+	 $(LOCAL_PATH)/vendor/media/media_codecs.xml:system/etc/media_codecs.xml \
+	 $(LOCAL_PATH)/vendor/media/media_profiles.xml:system/etc/media_profiles.xml
 
 #Frameworks needed (maybe?)
 PRODUCT_COPY_FILES += \
