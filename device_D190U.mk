@@ -18,7 +18,7 @@
 
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
-$(call inherit-product-if-exists, device/BLU/D190U/vendor/scx15_sp7715ga_FS001-vendor.mk)
+#$(call inherit-product-if-exists, device/BLU/D190U/vendor/scx15_sp7715ga_FS001-vendor.mk)
 
 #Overlays
 DEVICE_PACKAGE_OVERLAYS += device/BLU/D190U/overlay
