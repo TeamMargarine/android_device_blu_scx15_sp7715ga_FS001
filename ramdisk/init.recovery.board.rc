@@ -1,2 +1,0 @@
-on cali
-    insmod /system/lib/modules/ft5x0x_ts.ko

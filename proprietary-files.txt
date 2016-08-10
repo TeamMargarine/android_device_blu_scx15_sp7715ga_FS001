@@ -1,9 +1,0 @@
-#I have no idea yet if you need these files or not, will  probably find out soon :D
-
-#etc
-/etc/spn-conf.xml
-/etc/connectivity_calibration.ini
-/etc/adb.iso
-
-#libs
-/lib/libstagefright_soft_aacdec.so
