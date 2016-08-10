@@ -1,0 +1,2 @@
+add_lunch_combo cm_d190u-userdebug
+add_lunch_combo cm_d190u-eng
