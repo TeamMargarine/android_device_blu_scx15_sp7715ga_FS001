@@ -25,7 +25,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	 ro.sf.lcd_width=36 \
 	 ro.sf.lcd_height=54 \
 	 keyguard.no_require_sim=true \
-	 lmk.autocalc=false \
 	 ro.msms.phone_count=2 \
 	 ro.modem.w.count=2 \
 	 sys.usb.gser.count=4
