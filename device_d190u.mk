@@ -27,5 +27,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	 keyguard.no_require_sim=true \
 	 ro.msms.phone_count=2 \
 	 ro.modem.w.count=2 \
+	 wcdma.sim.slot.cfg=true \
 	 sys.usb.gser.count=4
 	 
