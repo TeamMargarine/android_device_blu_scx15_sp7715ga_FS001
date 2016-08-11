@@ -25,7 +25,13 @@ TARGET_BOOTLOADER_BOARD_NAME := scx15_sp7715ga
 
 BOARD_HAS_NO_SELECT_BUTTON := true
 
+#Kernel
 TARGET_PREBUILT_KERNEL := device/blu/d190u/zImage
+BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_CMDLINE := console=ttyS1,115200n8
+
+#Userimages
+TARGET_USERIMAGES_USE_UBIFS := true
 
 PRODUCT_COPY_FILES += device/blu/d190u/twrp.fstab:recovery/root/etc/twrp.fstab
 
