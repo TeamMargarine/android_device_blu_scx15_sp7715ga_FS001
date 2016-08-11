@@ -29,11 +29,10 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 TARGET_PREBUILT_KERNEL := device/blu/d190u/zImage
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := console=ttyS1,115200n8
+TARGET_RECOVERY_FSTAB += device/blu/d190u/nand/twrp.fstab
 
 #Userimages
 TARGET_USERIMAGES_USE_UBIFS := true
-
-PRODUCT_COPY_FILES += device/blu/d190u/twrp.fstab:recovery/root/etc/twrp.fstab
 
 #TWRP
 RECOVERY_VARIANT := twrp
@@ -45,3 +44,4 @@ TW_INTERNAL_STORAGE_PATH := "/data/media"
 TW_INTERNAL_STORAGE_MOUNT_POINT := "data"
 TW_EXTERNAL_STORAGE_PATH := "/sdcard"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
+TW_FLASH_FROM_STORAGE := true
