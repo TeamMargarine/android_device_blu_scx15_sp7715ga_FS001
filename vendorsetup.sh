@@ -1,2 +1,2 @@
-add_lunch_combo cm_d190u-userdebug
-add_lunch_combo cm_d190u-eng
+add_lunch_combo cm_scx15_sp7715ga_FS001-userdebug
+add_lunch_combo cm_scx15_sp7715ga_FS001-eng

@@ -17,11 +17,11 @@
 #
 
 #Inherit device-specific files
-$(call inherit-product, device/blu/d190u/device_d190u.mk)
+$(call inherit-product, device/blu/scx15_sp7715ga_FS001/device_scx15_sp7715ga_FS001.mk)
 
 #Overrides
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-PRODUCT_NAME := full_d190u
+PRODUCT_NAME := full_scx15_sp7715ga_FS001
 PRODUCT_DEVICE := scx15_sp7715ga_FS001
 PRODUCT_BRAND := BLU
 PRODUCT_MODEL := DASH JR 3G

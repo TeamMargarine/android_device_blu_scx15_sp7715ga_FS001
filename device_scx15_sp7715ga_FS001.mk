@@ -17,7 +17,7 @@
 # and I guess this phone as well....
 
 #We need an fstab
-PRODUCT_COPY_FILES += device/blu/d190u/nand/twrp.fstab:recovery/root/etc/twrp.fstab
+PRODUCT_COPY_FILES += device/blu/scx15_sp7715ga_FS001/nand/twrp.fstab:recovery/root/etc/twrp.fstab
 
 #Video Wallpapers (Who uses these??)
 PRODUCT_VIDEO_WALLPAPERS := none

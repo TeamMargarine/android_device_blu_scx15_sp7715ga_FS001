@@ -27,10 +27,10 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 
 TARGET_OTA_ASSERT_DEVICE := D190U,d190u,scx15_sp7715ga_FS001
 #Kernel
-TARGET_PREBUILT_KERNEL := device/blu/d190u/zImage
+TARGET_PREBUILT_KERNEL := device/blu/scx15_sp7715ga_FS001/zImage
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_CMDLINE := console=ttyS1,115200n8
-TARGET_RECOVERY_FSTAB += device/blu/d190u/nand/twrp.fstab
+TARGET_RECOVERY_FSTAB += device/blu/scx15_sp7715ga_FS001/nand/twrp.fstab
 
 #Userimages
 TARGET_USERIMAGES_USE_UBIFS := true
