@@ -1,21 +1,21 @@
 # BLU Dash Jr 3G D190U
-Device tree for the Blu Dash JR 3G
+Device tree for the BLU Dash JR 3G
 
 #Specification sheet
 
-|Features       | Specification       |
-| :-------------| :-------------------|
-|CPU            | Single Core 1.0 GHz |
-|Chipset        | SC7715              |
-|GPU            | Mali-400            |
-|Memory         | 256MB               |
-|Storage        | 512MB               |
-|MicroSD        | Yes                 |
-|Battery        | 1300 Mah            |
-|Resolution     | 320 x 480 pixels    |
-|Front Camera   | 0.3 MP              |
-|Main Camera    | 2 MP                |
-|Codename       | scx15_sp7715ga_FS001|
+|Features      | Specification        |
+| :------------| :--------------------|
+|CPU           | Single Core 1.0 GHz  |
+|Chipset       | SC7715               |
+|GPU           | Mali-400             |
+|Memory        | 256MB                |
+|Storage       | 512MB                |
+|MicroSD       | Yes                  |
+|Battery       | 1300 Mah             |
+|Resolution    | 320 x 480 pixels     |
+|Front Camera  | 0.3 MP               |
+|Main Camera   | 2 MP                 |
+|Codename      | scx15_sp7715ga_FS001 |
 
 #Note
 
@@ -36,8 +36,8 @@ List of known BLU Dash JR 3G variants (I should start collecting :D )
 
 Note: the D191L is not known to exist even though there is an L version of all the other variants.
 
-VINDICATION!!!!!!!!!!!!!!!!
+**VINDICATION!!!!!!!!!!!!!!!!**
 
-All of the D190x versions use the SC7715 processor... I WAS RIGHT!!!!!!! :D
+All of the D190x versions use the _SC7715_ processor... I WAS RIGHT!!!!!!! :D
 
 Thanks BLU, really appreciate all the information you've given out.
