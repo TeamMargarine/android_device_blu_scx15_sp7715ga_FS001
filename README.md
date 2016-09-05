@@ -34,6 +34,10 @@ List of known BLU Dash JR 3G variants (I should start collecting :D )
 
 5. D192L
 
-I believe the D190x versions all use the SC7715 processor... I could be completely wrong about it though as it is a complete guess.
+Note: the D191L is not known to exist even though there is an L version of all the other variants.
+
+VINDICATION!!!!!!!!!!!!!!!!
+
+All of the D190x versions use the SC7715 processor... I WAS RIGHT!!!!!!! :D
 
 Thanks BLU, really appreciate all the information you've given out.
