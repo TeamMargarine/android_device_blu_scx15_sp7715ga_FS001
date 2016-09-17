@@ -22,8 +22,24 @@ PRODUCT_COPY_FILES += device/blu/scx15_sp7715ga_FS001/nand/twrp.fstab:recovery/r
 #And another....
 PRODUCT_COPY_FILES += device/blu/scx15_sp7715ga_FS001/rootdir/fstab.scx15:root/fstab.scx15
 
+PRODUCT_PACKAGES += \
+    mke2fs \
+    mkcached.sh \
+	busybox
+
 #Video Wallpapers (Who uses these??)
-PRODUCT_VIDEO_WALLPAPERS := none
+#PRODUCT_VIDEO_WALLPAPERS := none
+
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.storage.flash_type=1
+
+STORAGE_INTERNAL := emulated
+STORAGE_PRIMARY := external
+
+PRODUCT_COPY_FILES += \
+	    device/blu/scx15_sp7715ga_FS001/init.storage.rc:root/init.storage.rc
+
+PRODUCT_PACKAGE_OVERLAYS := device/blu/scx15_sp7715ga_FS001/storage
 
 #Build.prop overrides
 PRODUCT_PROPERTY_OVERRIDES += \
