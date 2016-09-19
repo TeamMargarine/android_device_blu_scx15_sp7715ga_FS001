@@ -37,7 +37,7 @@ STORAGE_INTERNAL := emulated
 STORAGE_PRIMARY := external
 
 PRODUCT_COPY_FILES += \
-	    device/blu/scx15_sp7715ga_FS001/init.storage.rc:root/init.storage.rc
+	    device/blu/scx15_sp7715ga_FS001/storage/init.storage.rc:root/init.storage.rc
 
 PRODUCT_PACKAGE_OVERLAYS := device/blu/scx15_sp7715ga_FS001/storage
 
